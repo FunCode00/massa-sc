@@ -5,7 +5,7 @@ import { Args, stringToBytes } from '@massalabs/as-types';
 /**
  * Represent Token
  */
-class Token {
+export class Token {
   public balance: u64;
 
   constructor (public name: string) {
@@ -14,12 +14,9 @@ class Token {
 }
 
 /**
-   * Represent Liquidity pool in the swap system
-   */
-/**
  * Represents a liquidity pool in the swap system.
  */
-class LiquidityPool {
+export class LiquidityPool {
   constructor(public tokenA: Token, public tokenB: Token, public reserveA: u64, public reserveB: u64) {}
 
   /**
@@ -88,7 +85,7 @@ class LiquidityPool {
 /**
  * Represent Swap System
  */
-class SwapToken {
+export class SwapToken {
   public tokens: Map<string, Token>;
   public liquidityPools: Map<string, LiquidityPool>;
 
